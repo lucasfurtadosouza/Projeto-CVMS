@@ -9,3 +9,6 @@ nsURI = 'http:///Diagrama_Classe_Clinica_Odontologica_v2.ecore'
 nsPrefix = 'Diagrama_Classe_Clinica_Odontologica_v2'
 
 eClass = EPackage(name=name, nsURI=nsURI, nsPrefix=nsPrefix)
+
+eClassifiers = {}
+getEClassifier = partial(Ecore.getEClassifier, searchspace=eClassifiers)
