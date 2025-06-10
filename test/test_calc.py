@@ -9,3 +9,15 @@ from calculadora import Calculadora
 def test_soma():
     calc = Calculadora()
     assert calc.soma(2,2) == 4
+
+def test_soma():
+    calc = Calculadora()
+    assert calc.soma(2,3) == 5
+
+def teste_sub():
+    calc = Calculadora()
+    assert calc.subtracao(2,2) == 0
+
+def test_div():
+    calc = Calculadora()
+    assert calc.divisao(2,1) ==2
