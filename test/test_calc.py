@@ -10,13 +10,13 @@ def test_soma():
     calc = Calculadora()
     assert calc.soma(2,2) == 4
 
-def test_soma():
-    calc = Calculadora()
-    assert calc.soma(2,3) == 5
-
-def teste_sub():
+def test_sub():
     calc = Calculadora()
     assert calc.subtracao(2,2) == 0
+
+def test_multiplicacao():
+    calc = Calculadora()
+    assert calc.multiplicaca(2,2) == 4
 
 def test_div():
     calc = Calculadora()
