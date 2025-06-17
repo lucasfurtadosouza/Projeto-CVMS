@@ -3,10 +3,10 @@ class Calculadora:
         return num1 + num2
     
     def subtracao(self,num1, num2):
-        pass
+        return num1 - num2
 
     def multiplicacao(self,num1, num2):
-        pass
+        return num1 * num2
 
     def divisao(self, num1, num2):
         if num2 != 0:
