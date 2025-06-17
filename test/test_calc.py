@@ -16,7 +16,7 @@ def test_sub():
 
 def test_multiplicacao():
     calc = Calculadora()
-    assert calc.multiplicaca(2,2) == 4
+    assert calc.multiplicacao(2,2) == 4
 
 def test_div():
     calc = Calculadora()
