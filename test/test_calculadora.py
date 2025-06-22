@@ -14,4 +14,4 @@ def test_multiplica():
 
 def test_divide():
     calc = Calculadora()
-    assert calc.divide(10, 2) == 5.0
+    assert calc.divide(10, 2) == 5
