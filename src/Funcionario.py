@@ -1,25 +1,21 @@
 from functools import partial
 import pyecore.ecore as Ecore
-from pyecore.ecore import EPackage, EAttribute
+from pyecore.ecore import EPackage, EAttribute, EString, EInt, EDouble
 from pyecore.ecore import *
-from types import String, Integer, EDouble
 from Pessoa import Pessoa
-
 
 name = 'Diagrama_Classe_Clinica_Odontologica_v2'
 nsURI = 'http:///Diagrama_Classe_Clinica_Odontologica_v2.ecore'
 nsPrefix = 'Diagrama_Classe_Clinica_Odontologica_v2'
 
-eClass = EPackage(name=name, nsURI=nsURI, nsPrefix=nsPrefix)
-
 eClassifiers = {}
-getEClassifier = partial(Ecore.getEClassifier, searchspace=eClassifiers)\
+getEClassifier = partial(Ecore.getEClassifier, searchspace=eClassifiers)
 
 class Funcionario(Pessoa):
 
-    funcao = EAttribute(eType=String, unique=True, derived=False, changeable=True)
+    funcao = EAttribute(eType=EString, unique=True, derived=False, changeable=True)
     salario = EAttribute(eType=EDouble, unique=True, derived=False, changeable=True)
-    dia_pagamento = EAttribute(eType=Integer, unique=True, derived=False, changeable=True)
+    dia_pagamento = EAttribute(eType=EInt, unique=True, derived=False, changeable=True)
 
     def __init__(self, *, funcao=None, salario=None, dia_pagamento=None, **kwargs):
 
@@ -79,7 +75,6 @@ class Funcionario(Pessoa):
             print(f"Erro inesperado ao cadastrar funcionário: {e}")
             return False
         
-
 
     def AtualizarFuncionario(self, **kwargs):
         """
@@ -145,4 +140,3 @@ class Funcionario(Pessoa):
                 setattr(self, campo, valor_antigo)
             print(f"Erro inesperado ao atualizar funcionário: {e}")
             return False
-        

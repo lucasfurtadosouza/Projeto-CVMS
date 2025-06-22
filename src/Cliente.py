@@ -1,10 +1,8 @@
 from functools import partial
 import pyecore.ecore as Ecore
-from pyecore.ecore import EPackage, EAttribute
+from pyecore.ecore import EPackage, EAttribute, EInt, EString
 from pyecore.ecore import *
-from types import String
 from Pessoa import Pessoa
-
 
 name = 'Diagrama_Classe_Clinica_Odontologica_v2'
 nsURI = 'http:///Diagrama_Classe_Clinica_Odontologica_v2.ecore'
@@ -17,8 +15,8 @@ getEClassifier = partial(Ecore.getEClassifier, searchspace=eClassifiers)
 
 class Cliente(Pessoa):
 
-    tipo_sanguineo = EAttribute(eType=String, unique=True, derived=False, changeable=True)
-    necessidade_especial = EAttribute(eType=String, unique=True, derived=False, changeable=True)
+    tipo_sanguineo = EAttribute(eType=EString, unique=True, derived=False, changeable=True)
+    necessidade_especial = EAttribute(eType=EString, unique=True, derived=False, changeable=True)
 
     def __init__(self, *, tipo_sanguineo=None, necessidade_especial=None, **kwargs):
 
